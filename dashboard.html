@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Turnaj</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Turnaj Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#">Matches</a>
+            <a href="#">Leaderboard</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="user-menu">
+            <div class="notifications">
+                <span class="bell">🔔</span>
+                <span class="badge">3</span>
+            </div>
+            <div class="profile">
+                <img src="/images/logo.png" alt="Avatar" class="avatar">
+                <span id="userName">User</span>
+                <div class="dropdown">
+                    <a href="#">Settings</a>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <section class="welcome-section">
+            <h1 id="welcomeMessage">Welcome back, User!</h1>
+            <div class="stats-card">
+                <div class="stat">
+                    <h3>Total Points</h3>
+                    <p id="totalPoints">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Rank</h3>
+                    <p id="rank">#1</p>
+                </div>
+                <div class="stat">
+                    <h3>Tournaments Joined</h3>
+                    <p id="tournaments">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-matches">
+            <h2>Upcoming Matches</h2>
+            <div class="matches-grid">
+                <div class="match-card">
+                    <div class="teams">
+                        <img src="/images/arsenal.jpg" alt="Arsenal">
+                        <span>vs</span>
+                        <img src="/images/chealsea.jpg" alt="Chelsea">
+                    </div>
+                    <p>Oct 1, 2025 - 15:00</p>
+                    <div id="countdown">00:00:00</div>
+                    <button class="btn-primary">Predict</button>
+                </div>
+                <!-- Add more match cards -->
+            </div>
+        </section>
+
+        <section class="predictions">
+            <h2>Your Predictions</h2>
+            <div class="filter-tabs">
+                <button class="active">Upcoming</button>
+                <button>Completed</button>
+            </div>
+            <div class="predictions-list">
+                <div class="prediction-item">
+                    <p>Arsenal vs Chelsea: Predicted 2-1</p>
+                    <p>Points: +10</p>
+                </div>
+                <!-- Add more -->
+            </div>
+        </section>
+
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <div class="leaderboard-snapshot">
+                <div class="leader-item">
+                    <span>1. John Doe</span>
+                    <span>150 pts</span>
+                </div>
+                <!-- Top 5 -->
+            </div>
+            <button class="btn-secondary">See Full Leaderboard</button>
+        </section>
+
+        <section class="notifications">
+            <h2>Notifications</h2>
+            <div class="notification-card">
+                <p>You earned 10 points for predicting Chelsea 2–1 Arsenal correctly!</p>
+            </div>
+            <div class="notification-card">
+                <p>New tournament starting this weekend!</p>
+            </div>
+        </section>
+
+        <section class="ctas">
+            <button class="btn-primary">Join New Tournament</button>
+            <button class="btn-primary">View My Team / Profile</button>
+            <button class="btn-primary">Invite Friends</button>
+        </section>
+    </div>
+
+    <script src="/auth/auth.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
