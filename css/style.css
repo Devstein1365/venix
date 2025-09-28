@@ -84,7 +84,7 @@ header .header-links .auth-links li a:hover {
   line-height: 40px;
 }
 .hero .get-started {
-    margin-top: 20px;
+  margin-top: 20px;
   border: 1px solid #092a96;
   border-radius: 30px;
   padding: 16px 8px;
@@ -98,6 +98,45 @@ header .header-links .auth-links li a:hover {
   padding: 10px 30px;
   border-radius: 25px;
   /* border: 1px solid #e95018; */
-  transition: .5s;
+  transition: 0.5s;
 }
 
+/* FEATURE SECTION  */
+.features {
+  padding: 20px 80px;
+  margin-top: 40px;
+  text-align: center;
+}
+.features h1 {
+  color: #e2e2e2;
+  margin-bottom: 40px;
+}
+.feat-prod {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.features .feat-box {
+  width: 270px;
+  padding: 30px 40px;
+  border: 1px solid #c9c5c5;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.features .feat-box img {
+  margin-bottom: 30px;
+}
+.features .feat-box h3 {
+  color: #c9c5c5;
+  font-weight: 500;
+}
+.features .feat-box:hover {
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(103%);
+}
