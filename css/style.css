@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -578,9 +579,9 @@ section h2 {
   transition: all 0.3s ease;
 }
 
-.newsletter-form .arrow-btn img {
-  width: 20px;
-  height: 20px;
+.newsletter-form .arrow-btn i {
+  font-size: 18px;
+  color: #fff;
 }
 
 .newsletter-form .arrow-btn:hover {
@@ -649,7 +650,7 @@ footer {
   gap: 20px;
 }
 
-.social-icon {
+.social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -658,27 +659,28 @@ footer {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  font-style: normal;
+  text-decoration: none;
+  font-size: 18px;
   transition: all 0.3s ease;
 }
 
-.social-icons a {
-  text-decoration: none;
+.social-icons a:hover {
+  transform: translateY(-3px);
 }
 
-.facebook:hover {
+.social-icons a:nth-child(1):hover {
   background: #3b5998;
 }
 
-.twitter:hover {
+.social-icons a:nth-child(2):hover {
   background: #1da1f2;
 }
 
-.linkedin:hover {
+.social-icons a:nth-child(3):hover {
   background: #0077b5;
 }
 
-.instagram:hover {
+.social-icons a:nth-child(4):hover {
   background: linear-gradient(
     45deg,
     #405de6,
