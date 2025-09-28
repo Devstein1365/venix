@@ -140,3 +140,13 @@ header .header-links .auth-links li a:hover {
   box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
   transform: scale(103%);
 }
+
+.how-it-works{
+   padding: 20px 80px;
+  margin-top: 40px;
+  text-align: center;
+  color: #c9c5c5;
+}
+.how-it-works h3{
+  color: #e95018;
+} 
