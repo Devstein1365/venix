@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Turnaj</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
     <link
@@ -15,9 +16,36 @@
     />
   </head>
   <body>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="#">Matches</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="user-section">
+        <div class="user-profile">
+          <img src="/images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="mobileUserName">User</span>
+        </div>
+        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="#" id="mobileLogout"
+          ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+        >
+      </div>
+    </nav>
+
     <header class="dashboard-header">
       <div class="logo">
         <img src="/images/logo.png" alt="Turnaj Logo" />
+      </div>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <nav class="nav-links">
         <a href="dashboard.html">Dashboard</a>
@@ -87,7 +115,9 @@
             <div class="match-time">
               <i class="fa-regular fa-clock"></i> 15:00
             </div>
-            <div id="countdown">00:00:00</div>
+            <div id="countdown" data-countdown="2025-10-01T15:00:00">
+              00:00:00
+            </div>
             <button class="predict-btn">Predict</button>
           </div>
 
@@ -109,7 +139,9 @@
             <div class="match-time">
               <i class="fa-regular fa-clock"></i> 18:30
             </div>
-            <div class="countdown">03:05:22:15</div>
+            <div class="countdown" data-countdown="2025-10-03T18:30:00">
+              03:05:22:15
+            </div>
             <button class="predict-btn">Predict</button>
           </div>
         </div>
