@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Turnaj</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="/images/logo.png" alt="Turnaj Logo">
-        </div>
-        <div class="header-links">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="auth-links">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Sign Up</a></li>
-            </ul>
-        </div>
+      <div class="logo">
+        <img src="/images/logo.png" alt="Turnaj Logo" />
+      </div>
+      <div class="header-links">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="auth-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+        </ul>
+      </div>
     </header>
 
     <div class="auth-container">
-        <div class="auth-form">
-            <h2>Login to Turnaj</h2>
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="emailOrUsername">Email or Username</label>
-                    <input type="text" id="emailOrUsername" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" required>
-                </div>
-                <button type="submit" class="btn-primary">Login</button>
-            </form>
-            <p><a href="forgot.html">Forgot Password?</a></p>
-            <p>Don't have an account? <a href="register.html">Sign up here</a></p>
-        </div>
+      <div class="auth-form">
+        <h2>Login to Turnaj</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="emailOrUsername">Email or Username</label>
+            <input type="text" id="emailOrUsername" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <p><a href="forgot.html">Forgot Password?</a></p>
+        <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+      </div>
     </div>
 
     <script src="/auth/auth.js"></script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,278 @@
+/* Responsive Styles for Venix Project */
+
+/* Large Screens (above 1200px) */
+@media screen and (max-width: 1200px) {
+  .hero h1 {
+    font-size: 60px;
+    line-height: 90px;
+  }
+
+  .hero p {
+    font-size: 40px;
+  }
+
+  .hero .hero-text {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .dashboard-container {
+    padding: 30px 40px;
+  }
+}
+
+/* Medium Screens (992px - 1199px) */
+@media screen and (max-width: 992px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  header .logo img {
+    width: 80px;
+    margin-left: 20px;
+  }
+
+  header .header-links {
+    gap: 30px;
+  }
+
+  header .header-links .nav-links li,
+  header .header-links .auth-links li {
+    padding: 5px 10px;
+  }
+
+  header .header-links .nav-links li a,
+  header .header-links .auth-links li a {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 40px 40px 40px 60px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+    line-height: 75px;
+  }
+
+  .hero p {
+    font-size: 35px;
+  }
+
+  .hero .hero-text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .features {
+    padding: 20px 40px;
+  }
+
+  .feat-prod {
+    flex-wrap: wrap;
+  }
+
+  .features .feat-box {
+    width: calc(50% - 15px);
+  }
+
+  .how-it-works .steps-container {
+    gap: 20px;
+  }
+
+  .stats-card {
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    min-width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  .matches-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* Small Screens (768px - 991px) */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  header .logo img {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  header .header-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  header .header-links .nav-links,
+  header .header-links .auth-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .hero p {
+    font-size: 30px;
+  }
+
+  .hero .hero-text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .features h1 {
+    font-size: 24px;
+  }
+
+  .features .feat-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .how-it-works h1 {
+    font-size: 36px;
+  }
+
+  .how-it-works .step {
+    width: calc(50% - 15px);
+  }
+
+  .auth-form {
+    max-width: 350px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .dashboard-header .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .welcome-section h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .stat {
+    min-width: 100%;
+  }
+
+  .matches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-btn {
+    min-width: 220px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+/* Extra Small Screens (below 576px) */
+@media screen and (max-width: 576px) {
+  header .header-links .nav-links,
+  header .header-links .auth-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .hero p {
+    font-size: 24px;
+  }
+
+  .hero .hero-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .how-it-works .step {
+    width: 100%;
+  }
+
+  .prediction-item {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .prediction-result {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .leader-item {
+    flex-wrap: wrap;
+  }
+
+  .leader-stats {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .notification-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notif-icon {
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .newsletter-form input {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form .arrow-btn {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 0 auto;
+  }
+}
