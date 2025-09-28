@@ -1,120 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Turnaj</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <header class="dashboard-header">
-        <div class="logo">
-            <img src="/images/logo.png" alt="Turnaj Logo">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Turnaj Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">Matches</a>
+        <a href="#">Leaderboard</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fa-solid fa-bell bell"></i>
+          <span class="badge">3</span>
         </div>
-        <nav class="nav-links">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="#">Matches</a>
-            <a href="#">Leaderboard</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div class="user-menu">
-            <div class="notifications">
-                <span class="bell">🔔</span>
-                <span class="badge">3</span>
-            </div>
-            <div class="profile">
-                <img src="/images/logo.png" alt="Avatar" class="avatar">
-                <span id="userName">User</span>
-                <div class="dropdown">
-                    <a href="#">Settings</a>
-                    <a href="#" id="logout">Logout</a>
-                </div>
-            </div>
+        <div class="profile">
+          <img src="/images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="userName">User</span>
+          <div class="dropdown">
+            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="#" id="logout"
+              ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+            >
+          </div>
         </div>
+      </div>
     </header>
 
     <div class="dashboard-container">
-        <section class="welcome-section">
-            <h1 id="welcomeMessage">Welcome back, User!</h1>
-            <div class="stats-card">
-                <div class="stat">
-                    <h3>Total Points</h3>
-                    <p id="totalPoints">0</p>
-                </div>
-                <div class="stat">
-                    <h3>Rank</h3>
-                    <p id="rank">#1</p>
-                </div>
-                <div class="stat">
-                    <h3>Tournaments Joined</h3>
-                    <p id="tournaments">0</p>
-                </div>
-            </div>
-        </section>
+      <section class="welcome-section">
+        <h1 id="welcomeMessage">Welcome back, User!</h1>
+        <div class="stats-card">
+          <div class="stat">
+            <i class="fa-solid fa-trophy stat-icon"></i>
+            <h3>Total Points</h3>
+            <p id="totalPoints">0</p>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-ranking-star stat-icon"></i>
+            <h3>Rank</h3>
+            <p id="rank">#1</p>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-medal stat-icon"></i>
+            <h3>Tournaments Joined</h3>
+            <p id="tournaments">0</p>
+          </div>
+        </div>
+      </section>
 
-        <section class="upcoming-matches">
-            <h2>Upcoming Matches</h2>
-            <div class="matches-grid">
-                <div class="match-card">
-                    <div class="teams">
-                        <img src="/images/arsenal.jpg" alt="Arsenal">
-                        <span>vs</span>
-                        <img src="/images/chealsea.jpg" alt="Chelsea">
-                    </div>
-                    <p>Oct 1, 2025 - 15:00</p>
-                    <div id="countdown">00:00:00</div>
-                    <button class="btn-primary">Predict</button>
-                </div>
-                <!-- Add more match cards -->
+      <section class="upcoming-matches">
+        <h2>Upcoming Matches</h2>
+        <div class="matches-grid">
+          <div class="match-card">
+            <div class="match-date">
+              <i class="fa-regular fa-calendar"></i> Oct 1, 2025
             </div>
-        </section>
+            <div class="teams">
+              <div class="team">
+                <img src="/images/arsenal.jpg" alt="Arsenal" />
+                <span class="team-name">Arsenal</span>
+              </div>
+              <div class="vs-badge">VS</div>
+              <div class="team">
+                <img src="/images/chealsea.jpg" alt="Chelsea" />
+                <span class="team-name">Chelsea</span>
+              </div>
+            </div>
+            <div class="match-time">
+              <i class="fa-regular fa-clock"></i> 15:00
+            </div>
+            <div id="countdown">00:00:00</div>
+            <button class="predict-btn">Predict</button>
+          </div>
 
-        <section class="predictions">
-            <h2>Your Predictions</h2>
-            <div class="filter-tabs">
-                <button class="active">Upcoming</button>
-                <button>Completed</button>
+          <div class="match-card">
+            <div class="match-date">
+              <i class="fa-regular fa-calendar"></i> Oct 3, 2025
             </div>
-            <div class="predictions-list">
-                <div class="prediction-item">
-                    <p>Arsenal vs Chelsea: Predicted 2-1</p>
-                    <p>Points: +10</p>
-                </div>
-                <!-- Add more -->
+            <div class="teams">
+              <div class="team">
+                <img src="/images/man-u.jpg" alt="Manchester United" />
+                <span class="team-name">Man United</span>
+              </div>
+              <div class="vs-badge">VS</div>
+              <div class="team">
+                <img src="/images/arsenal.jpg" alt="Arsenal" />
+                <span class="team-name">Arsenal</span>
+              </div>
             </div>
-        </section>
+            <div class="match-time">
+              <i class="fa-regular fa-clock"></i> 18:30
+            </div>
+            <div class="countdown">03:05:22:15</div>
+            <button class="predict-btn">Predict</button>
+          </div>
+        </div>
+      </section>
 
-        <section class="leaderboard">
-            <h2>Leaderboard</h2>
-            <div class="leaderboard-snapshot">
-                <div class="leader-item">
-                    <span>1. John Doe</span>
-                    <span>150 pts</span>
-                </div>
-                <!-- Top 5 -->
+      <section class="predictions">
+        <h2>Your Predictions</h2>
+        <div class="filter-tabs">
+          <button class="tab-btn active">Upcoming</button>
+          <button class="tab-btn">Completed</button>
+        </div>
+        <div class="predictions-list">
+          <div class="prediction-item">
+            <div class="prediction-match">
+              <div class="teams-mini">
+                <img
+                  src="/images/arsenal.jpg"
+                  alt="Arsenal"
+                  class="team-icon"
+                />
+                <span>vs</span>
+                <img
+                  src="/images/chealsea.jpg"
+                  alt="Chelsea"
+                  class="team-icon"
+                />
+              </div>
+              <div class="prediction-details">
+                <p class="match-teams">Arsenal vs Chelsea</p>
+                <p class="prediction-score">Your Prediction: 2-1</p>
+              </div>
             </div>
-            <button class="btn-secondary">See Full Leaderboard</button>
-        </section>
+            <div class="prediction-result">
+              <span class="points">+10</span>
+              <span class="status correct"
+                ><i class="fa-solid fa-circle-check"></i
+              ></span>
+            </div>
+          </div>
 
-        <section class="notifications">
-            <h2>Notifications</h2>
-            <div class="notification-card">
-                <p>You earned 10 points for predicting Chelsea 2–1 Arsenal correctly!</p>
+          <div class="prediction-item">
+            <div class="prediction-match">
+              <div class="teams-mini">
+                <img
+                  src="/images/man-u.jpg"
+                  alt="Man United"
+                  class="team-icon"
+                />
+                <span>vs</span>
+                <img
+                  src="/images/arsenal.jpg"
+                  alt="Arsenal"
+                  class="team-icon"
+                />
+              </div>
+              <div class="prediction-details">
+                <p class="match-teams">Man United vs Arsenal</p>
+                <p class="prediction-score">Your Prediction: 1-2</p>
+              </div>
             </div>
-            <div class="notification-card">
-                <p>New tournament starting this weekend!</p>
+            <div class="prediction-result">
+              <span class="points">Pending</span>
+              <span class="status pending"
+                ><i class="fa-solid fa-clock"></i
+              ></span>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="ctas">
-            <button class="btn-primary">Join New Tournament</button>
-            <button class="btn-primary">View My Team / Profile</button>
-            <button class="btn-primary">Invite Friends</button>
-        </section>
+      <section class="leaderboard">
+        <h2>Leaderboard</h2>
+        <div class="leaderboard-snapshot">
+          <div class="leader-item top-leader">
+            <div class="rank-badge gold">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="leader-info">
+              <span class="leader-name">John Doe</span>
+              <div class="leader-stats">
+                <span class="points">150 pts</span>
+                <span class="streak">🔥 5 day streak</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge silver">2</div>
+            <div class="leader-info">
+              <span class="leader-name">Jane Smith</span>
+              <div class="leader-stats">
+                <span class="points">142 pts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge bronze">3</div>
+            <div class="leader-info">
+              <span class="leader-name">Mark Johnson</span>
+              <div class="leader-stats">
+                <span class="points">135 pts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="leader-item user-rank">
+            <div class="rank-badge you">24</div>
+            <div class="leader-info">
+              <span class="leader-name">You</span>
+              <div class="leader-stats">
+                <span class="points">75 pts</span>
+                <span class="rank-up"
+                  ><i class="fa-solid fa-arrow-up"></i> 3</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-secondary">
+          See Full Leaderboard <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </section>
+
+      <section class="notifications">
+        <h2>Notifications <span class="notif-badge">3</span></h2>
+        <div class="notification-card">
+          <div class="notif-icon success">
+            <i class="fa-solid fa-check-circle"></i>
+          </div>
+          <div class="notif-content">
+            <p class="notif-message">
+              You earned 10 points for predicting Chelsea 2–1 Arsenal correctly!
+            </p>
+            <span class="notif-time">2 hours ago</span>
+          </div>
+        </div>
+        <div class="notification-card">
+          <div class="notif-icon tournament">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="notif-content">
+            <p class="notif-message">
+              New tournament starting this weekend! Join now to get early
+              access.
+            </p>
+            <span class="notif-time">5 hours ago</span>
+          </div>
+        </div>
+        <div class="notification-card">
+          <div class="notif-icon update">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="notif-content">
+            <p class="notif-message">
+              Your profile has been verified! You can now participate in premium
+              tournaments.
+            </p>
+            <span class="notif-time">1 day ago</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="ctas">
+        <button class="action-btn primary">
+          <i class="fa-solid fa-plus"></i>
+          Join Tournament
+        </button>
+        <button class="action-btn secondary">
+          <i class="fa-solid fa-user"></i>
+          My Profile
+        </button>
+        <button class="action-btn tertiary">
+          <i class="fa-solid fa-share-nodes"></i>
+          Invite Friends
+        </button>
+      </section>
     </div>
 
     <script src="/auth/auth.js"></script>
     <script src="/js/script.js"></script>
-</body>
+  </body>
 </html>
