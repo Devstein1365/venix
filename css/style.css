@@ -518,6 +518,8 @@ section h2 {
   border-radius: 15px;
   transition: 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-start;
 }
 
 .match-card:hover,
@@ -1305,4 +1307,56 @@ footer {
 
 .btn-secondary:hover {
   background: #0a2fa8;
+}
+
+.notif-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.notif-icon.success {
+  background: rgba(46, 125, 50, 0.2);
+  color: #4caf50;
+}
+
+.notif-icon.tournament {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.notif-icon.update {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+}
+
+.notif-content {
+  flex: 1;
+}
+
+.notif-message {
+  color: #e2e2e2;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.notif-time {
+  color: #c9c5c5;
+  font-size: 14px;
+}
+
+.notif-badge {
+  background: #e95018;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 8px;
 }
