@@ -9,7 +9,37 @@ const mobileNav = document.querySelector(".mobile-nav");
 const mobileNavOverlay = document.querySelector(".mobile-nav-overlay");
 const dropdownItems = document.querySelectorAll(".dropdown-toggle");
 const tabButtons = document.querySelectorAll(".tab-btn");
-const countdownElements = document.querySelectorAll("#countdown, .countdown");
+const countdownElements = d;
+/**
+ * Handle logout
+ */
+function initLogout() {
+  [logoutBtn, mobileLogoutBtn].forEach((btn) => {
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html";
+      });
+    }
+  });
+
+  if (mobileSettingsBtn) {
+    mobileSettingsBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "settings.html";
+    });
+  }
+}
+electorAll("#countdown, .countdown");
+const joinTournamentBtn = document.getElementById("joinTournament");
+const inviteFriendsBtn = document.getElementById("inviteFriends");
+const settingsForm = document.getElementById("settingsForm");
+const profileMenu = document.querySelector(".profile");
+const settingsBtn = document.getElementById("settings");
+const logoutBtn = document.getElementById("logout");
+const mobileLogoutBtn = document.getElementById("mobileLogout");
+const mobileSettingsBtn = document.getElementById("mobileSettings");
 
 /**
  * Toggle mobile navigation menu
@@ -95,12 +125,19 @@ function initTabs() {
       // Add active class to clicked button
       button.classList.add("active");
 
-      // Here you would implement the tab content switching
-      // This would depend on your specific tab implementation
-      const tabTarget = button.dataset.target;
-
-      // For demonstration - you would replace this with actual tab content logic
-      console.log(`Tab switched to ${tabTarget || button.textContent}`);
+      // Switch tab content
+      const tabId = button.dataset.tab;
+      if (tabId) {
+        // Hide all tab contents
+        document
+          .querySelectorAll(".matches-list")
+          .forEach((list) => list.classList.remove("active"));
+        // Show the selected tab content
+        const activeList = document.getElementById(tabId + "-matches");
+        if (activeList) {
+          activeList.classList.add("active");
+        }
+      }
     });
   });
 }
@@ -378,6 +415,109 @@ function initThemeToggle() {
 }
 
 /**
+ * Handle join tournament button
+ */
+function initJoinTournament() {
+  if (joinTournamentBtn) {
+    joinTournamentBtn.addEventListener("click", () => {
+      alert("You have successfully joined the tournament!");
+      // Here you could redirect to a tournament page or update UI
+    });
+  }
+}
+
+/**
+ * Handle invite friends button
+ */
+function initInviteFriends() {
+  if (inviteFriendsBtn) {
+    inviteFriendsBtn.addEventListener("click", () => {
+      const shareUrl = window.location.origin;
+      if (navigator.share) {
+        navigator.share({
+          title: "Join Turnaj Fantasy Football",
+          text: "Check out this amazing fantasy football platform!",
+          url: shareUrl,
+        });
+      } else {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          alert("Link copied to clipboard! Share with your friends.");
+        });
+      }
+    });
+  }
+}
+
+/**
+ * Check login status and adjust UI accordingly
+ */
+function checkLoginStatus() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const authLinks = document.querySelectorAll(".auth-links");
+  const userMenus = document.querySelectorAll(".user-menu");
+
+  if (currentUser) {
+    // User is logged in, hide auth links, show user menu
+    authLinks.forEach((link) => (link.style.display = "none"));
+    userMenus.forEach((menu) => (menu.style.display = "flex"));
+  } else {
+    // User not logged in, show auth links, hide user menu
+    authLinks.forEach((link) => (link.style.display = "flex"));
+    userMenus.forEach((menu) => (menu.style.display = "none"));
+  }
+}
+
+/**
+ * Handle settings form submission
+ */
+function initSettingsForm() {
+  if (settingsForm) {
+    settingsForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // Here you would update the user data in localStorage
+      alert("Profile updated successfully!");
+      // For demo, just show alert
+    });
+  }
+}
+
+/**
+ * Handle profile dropdown toggle
+ */
+function initProfileDropdown() {
+  if (profileMenu) {
+    const dropdown = profileMenu.querySelector(".dropdown");
+
+    profileMenu.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!profileMenu.contains(e.target)) {
+        dropdown.classList.remove("active");
+      }
+    });
+  }
+}
+
+/**
+ * Handle logout
+ */
+function initLogout() {
+  [logoutBtn, mobileLogoutBtn].forEach((btn) => {
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html";
+      });
+    }
+  });
+}
+
+/**
  * Initialize all website functionality
  */
 function initWebsite() {
@@ -396,6 +536,12 @@ function initWebsite() {
   initScrollAnimations();
   syncUserNames();
   initThemeToggle();
+  initJoinTournament();
+  initInviteFriends();
+  initSettingsForm();
+  initProfileDropdown();
+  initLogout();
+  checkLoginStatus();
 
   console.log("Turnaj website initialized");
 }

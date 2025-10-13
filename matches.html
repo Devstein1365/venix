@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matches - Turnaj</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="matches.html">Matches</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="user-section">
+        <div class="user-profile">
+          <img src="/images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="mobileUserName">User</span>
+        </div>
+        <a href="#" id="mobileSettings"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="#" id="mobileLogout"
+          ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+        >
+      </div>
+    </nav>
+
+    <header class="dashboard-header">
+      <a href="dashboard.html" class="logo">
+        <img src="/images/logo.png" alt="Turnaj Logo" />
+      </a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="matches.html">Matches</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fa-solid fa-bell bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="profile">
+          <img src="/images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="userName">User</span>
+          <div class="dropdown">
+            <a href="#" id="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="#" id="logout"
+              ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-container">
+      <section class="matches-section">
+        <h2>All Matches</h2>
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-tab="upcoming">Upcoming</button>
+          <button class="tab-btn" data-tab="completed">Completed</button>
+        </div>
+
+        <div id="upcoming-matches" class="matches-list active">
+          <div class="match-card">
+            <div class="match-date">
+              <i class="fa-solid fa-calendar"></i>
+              <span>Oct 15, 2025</span>
+            </div>
+            <div class="match-time">
+              <i class="fa-solid fa-clock"></i>
+              <span>15:00</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <img src="/images/arsenal.jpg" alt="Arsenal" />
+                <div class="team-name">Arsenal</div>
+              </div>
+              <div class="vs-badge">VS</div>
+              <div class="team">
+                <img src="/images/chealsea.jpg" alt="Chelsea" />
+                <div class="team-name">Chelsea</div>
+              </div>
+            </div>
+            <div id="countdown1" class="countdown" data-countdown="2025-10-15T15:00:00"></div>
+            <button class="predict-btn">Predict</button>
+          </div>
+
+          <div class="match-card">
+            <div class="match-date">
+              <i class="fa-solid fa-calendar"></i>
+              <span>Oct 16, 2025</span>
+            </div>
+            <div class="match-time">
+              <i class="fa-solid fa-clock"></i>
+              <span>17:30</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <img src="/images/man-u.jpg" alt="Man Utd" />
+                <div class="team-name">Man Utd</div>
+              </div>
+              <div class="vs-badge">VS</div>
+              <div class="team">
+                <img src="/images/messi.avif" alt="Barcelona" />
+                <div class="team-name">Barcelona</div>
+              </div>
+            </div>
+            <div id="countdown2" class="countdown" data-countdown="2025-10-16T17:30:00"></div>
+            <button class="predict-btn">Predict</button>
+          </div>
+        </div>
+
+        <div id="completed-matches" class="matches-list">
+          <div class="match-card completed">
+            <div class="match-date">
+              <i class="fa-solid fa-calendar"></i>
+              <span>Oct 10, 2025</span>
+            </div>
+            <div class="match-result">
+              <span class="score">2 - 1</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <img src="/images/arsenal.jpg" alt="Arsenal" />
+                <div class="team-name">Arsenal</div>
+              </div>
+              <div class="vs-badge">VS</div>
+              <div class="team">
+                <img src="/images/man-u.jpg" alt="Man Utd" />
+                <div class="team-name">Man Utd</div>
+              </div>
+            </div>
+            <div class="match-status">Completed</div>
+          </div>
+
+          <div class="match-card completed">
+            <div class="match-date">
+              <i class="fa-solid fa-calendar"></i>
+              <span>Oct 8, 2025</span>
+            </div>
+            <div class="match-result">
+              <span class="score">0 - 3</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <img src="/images/chealsea.jpg" alt="Chelsea" />
+                <div class="team-name">Chelsea</div>
+              </div>
+              <div class="vs-badge">VS</div>
+              <div class="team">
+                <img src="/images/messi.avif" alt="Barcelona" />
+                <div class="team-name">Barcelona</div>
+              </div>
+            </div>
+            <div class="match-status">Completed</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/auth/auth.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html></content>
+<filePath">c:\Users\USER\Desktop\VS Code\venix\venix\matches.html

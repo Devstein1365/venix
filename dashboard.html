@@ -21,10 +21,10 @@
     <nav class="mobile-nav">
       <ul>
         <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="#">Matches</a></li>
-        <li><a href="#">Leaderboard</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="matches.html">Matches</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="user-section">
         <div class="user-profile">
@@ -49,15 +49,29 @@
       </div>
       <nav class="nav-links">
         <a href="dashboard.html">Dashboard</a>
-        <a href="#">Matches</a>
-        <a href="#">Leaderboard</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
+        <a href="matches.html">Matches</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <div class="user-menu">
         <div class="notifications">
           <i class="fa-solid fa-bell bell"></i>
           <span class="badge">3</span>
+          <div class="notifications-dropdown">
+            <div class="notif-item">
+              <i class="fa-solid fa-check-circle success"></i>
+              <div class="notif-text">You earned 10 points!</div>
+            </div>
+            <div class="notif-item">
+              <i class="fa-solid fa-trophy tournament"></i>
+              <div class="notif-text">New tournament available</div>
+            </div>
+            <div class="notif-item">
+              <i class="fa-solid fa-info-circle update"></i>
+              <div class="notif-text">App updated to v2.0</div>
+            </div>
+          </div>
         </div>
         <div class="profile">
           <img src="/images/messi.avif" alt="Avatar" class="avatar" />
@@ -261,9 +275,9 @@
             </div>
           </div>
         </div>
-        <button class="btn-secondary">
+        <a href="leaderboard.html" class="btn-secondary">
           See Full Leaderboard <i class="fa-solid fa-arrow-right"></i>
-        </button>
+        </a>
       </section>
 
       <section class="notifications">
@@ -306,15 +320,15 @@
       </section>
 
       <section class="ctas">
-        <button class="action-btn primary">
+        <button class="action-btn primary" id="joinTournament">
           <i class="fa-solid fa-plus"></i>
           Join Tournament
         </button>
-        <button class="action-btn secondary">
+        <a href="settings.html" class="action-btn secondary">
           <i class="fa-solid fa-user"></i>
           My Profile
-        </button>
-        <button class="action-btn tertiary">
+        </a>
+        <button class="action-btn tertiary" id="inviteFriends">
           <i class="fa-solid fa-share-nodes"></i>
           Invite Friends
         </button>

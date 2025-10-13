@@ -356,6 +356,11 @@
     gap: 15px;
     align-items: center;
   }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 /* Extra Small Screens (below 576px) */
@@ -428,5 +433,24 @@
     right: auto;
     top: auto;
     margin: 0 auto;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .leader-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .leader-info {
+    justify-content: center;
+  }
+
+  .leader-stats {
+    text-align: center;
   }
 }

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard - Turnaj</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="matches.html">Matches</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="user-section">
+        <div class="user-profile">
+          <img src="/images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="mobileUserName">User</span>
+        </div>
+        <a href="#" id="mobileSettings"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="#" id="mobileLogout"
+          ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+        >
+      </div>
+    </nav>
+
+    <header class="dashboard-header">
+      <a href="dashboard.html" class="logo">
+        <img src="/images/logo.png" alt="Turnaj Logo" />
+      </a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="matches.html">Matches</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fa-solid fa-bell bell"></i>
+          <span class="badge">3</span>
+        </div>
+        <div class="profile">
+          <img src="/images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="userName">User</span>
+          <div class="dropdown">
+            <a href="#" id="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="#" id="logout"
+              ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-container">
+      <section class="leaderboard-full">
+        <h2>Full Leaderboard</h2>
+        <div class="leaderboard-list">
+          <div class="leader-item top-leader">
+            <div class="rank-badge gold">1</div>
+            <div class="leader-info">
+              <img src="/images/messi.avif" alt="Player" class="avatar" />
+              <div class="leader-name">Lionel Messi</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">2,450 pts</div>
+              <div class="streak">5 wins</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge silver">2</div>
+            <div class="leader-info">
+              <img src="/images/arsenal.jpg" alt="Player" class="avatar" />
+              <div class="leader-name">Arsenal FC</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">2,320 pts</div>
+              <div class="streak">3 wins</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge bronze">3</div>
+            <div class="leader-info">
+              <img src="/images/man-u.jpg" alt="Player" class="avatar" />
+              <div class="leader-name">Manchester United</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">2,180 pts</div>
+              <div class="streak">2 wins</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge">4</div>
+            <div class="leader-info">
+              <img src="/images/chealsea.jpg" alt="Player" class="avatar" />
+              <div class="leader-name">Chelsea FC</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">2,050 pts</div>
+              <div class="streak">1 win</div>
+            </div>
+          </div>
+
+          <div class="leader-item user-rank">
+            <div class="rank-badge you">15</div>
+            <div class="leader-info">
+              <img src="/images/messi.avif" alt="Your Avatar" class="avatar" />
+              <div class="leader-name" id="currentUserName">You</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">1,850 pts</div>
+              <div class="streak">0 wins</div>
+            </div>
+          </div>
+
+          <!-- More leaderboard items -->
+          <div class="leader-item">
+            <div class="rank-badge">5</div>
+            <div class="leader-info">
+              <img src="/images/messi.avif" alt="Player" class="avatar" />
+              <div class="leader-name">Player 5</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">1,920 pts</div>
+              <div class="streak">1 win</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge">6</div>
+            <div class="leader-info">
+              <img src="/images/arsenal.jpg" alt="Player" class="avatar" />
+              <div class="leader-name">Player 6</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">1,880 pts</div>
+              <div class="streak">2 wins</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge">7</div>
+            <div class="leader-info">
+              <img src="/images/man-u.jpg" alt="Player" class="avatar" />
+              <div class="leader-name">Player 7</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">1,750 pts</div>
+              <div class="streak">0 wins</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge">8</div>
+            <div class="leader-info">
+              <img src="/images/chealsea.jpg" alt="Player" class="avatar" />
+              <div class="leader-name">Player 8</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">1,680 pts</div>
+              <div class="streak">1 win</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge">9</div>
+            <div class="leader-info">
+              <img src="/images/messi.avif" alt="Player" class="avatar" />
+              <div class="leader-name">Player 9</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">1,620 pts</div>
+              <div class="streak">3 wins</div>
+            </div>
+          </div>
+
+          <div class="leader-item">
+            <div class="rank-badge">10</div>
+            <div class="leader-info">
+              <img src="/images/arsenal.jpg" alt="Player" class="avatar" />
+              <div class="leader-name">Player 10</div>
+            </div>
+            <div class="leader-stats">
+              <div class="points">1,550 pts</div>
+              <div class="streak">2 wins</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/auth/auth.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html></content>
+<filePath">c:\Users\USER\Desktop\VS Code\venix\venix\leaderboard.html
