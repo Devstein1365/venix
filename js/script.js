@@ -13,7 +13,7 @@ const countdownElements = document.querySelectorAll("#countdown, .countdown");
 const joinTournamentBtn = document.getElementById("joinTournament");
 const inviteFriendsBtn = document.getElementById("inviteFriends");
 const settingsForm = document.getElementById("settingsForm");
-const profileMenu = document.querySelector(".profile");
+const profileMenu = document.querySelectorAll(".profile");
 const settingsBtn = document.getElementById("settings");
 const logoutBtn = document.getElementById("logout");
 const mobileLogoutBtn = document.getElementById("mobileLogout");
@@ -482,24 +482,43 @@ function initSettingsForm() {
 }
 
 /**
- * Handle profile dropdown toggle
+ * Handle profile dropdown toggle (delegated, reliable across pages)
  */
 function initProfileDropdown() {
-  if (profileMenu) {
-    const dropdown = profileMenu.querySelector(".dropdown");
-
-    profileMenu.addEventListener("click", (e) => {
-      e.stopPropagation();
-      dropdown.classList.toggle("active");
+  const closeAll = () => {
+    document.querySelectorAll(".dropdown.active").forEach((dd) => {
+      dd.classList.remove("active");
     });
+  };
 
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!profileMenu.contains(e.target)) {
-        dropdown.classList.remove("active");
-      }
-    });
-  }
+  // Single delegated handler to manage all interactions
+  document.addEventListener("click", (e) => {
+    const inDropdown = e.target.closest(".dropdown");
+    const profile = e.target.closest(".profile");
+
+    // If clicked inside an open dropdown, do nothing (let links work)
+    if (inDropdown) return;
+
+    // If click is on/inside a .profile, toggle its dropdown
+    if (profile) {
+      const dropdown = profile.querySelector(".dropdown");
+      if (!dropdown) return;
+      const isOpen = dropdown.classList.contains("active");
+      closeAll();
+      if (!isOpen) dropdown.classList.add("active");
+      return;
+    }
+
+    // Otherwise, clicked outside → close all
+    closeAll();
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeAll();
+    }
+  });
 }
 
 /**

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Turnaj</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="matches.html">Matches</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="blogboard.html">Blog</a></li>
+        <li><a href="contactboard.html">Contact</a></li>
+      </ul>
+      <div class="user-section">
+        <div class="user-profile">
+          <img src="images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="mobileUserName">User</span>
+        </div>
+        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="#" id="mobileLogout"
+          ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+        >
+      </div>
+    </nav>
+
+    <header class="dashboard-header">
+      <a href="dashboard.html" class="logo">
+        <img src="images/logo.png" alt="Turnaj Logo" />
+      </a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="matches.html">Matches</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="blogboard.html">Blog</a>
+        <a href="contactboard.html">Contact</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fa-solid fa-bell bell"></i>
+          <span class="badge">3</span>
+          <div class="notifications-dropdown">
+            <div class="notif-item">
+              <i class="fa-solid fa-check-circle success"></i>
+              <div class="notif-text">You earned 10 points!</div>
+            </div>
+            <div class="notif-item">
+              <i class="fa-solid fa-trophy tournament"></i>
+              <div class="notif-text">New tournament available</div>
+            </div>
+            <div class="notif-item">
+              <i class="fa-solid fa-info-circle update"></i>
+              <div class="notif-text">App updated to v2.0</div>
+            </div>
+          </div>
+        </div>
+        <div class="profile">
+          <img src="images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="userName">User</span>
+          <div class="dropdown">
+            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="#" id="logout"
+              ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <p>Contact Us</p>
+      <h1>
+        Get in Touch <br />
+        with Turnaj <br />
+        Support
+      </h1>
+      <span class="hero-text"
+        >Have questions about fantasy football or need help? <br />
+        Reach out to our team and we'll get back to you soon.</span
+      >
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-form-section">
+        <h2>Send us a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>support@turnaj.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-map-marker-alt"></i>
+          <div>
+            <h3>Address</h3>
+            <p>123 Football Street<br />London, UK</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Twitter"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Turnaj Logo" />
+        </div>
+
+        <div class="footer-links">
+          <a href="contactboard.html">Contact</a>
+          <a href="#">Terms of Services</a>
+          <a href="#">Privacy</a>
+        </div>
+
+        <div class="copyright">
+          <p>
+            Copyright © <span class="brand-name">Turnaj</span> | Designed by
+            <a href="https://venixpartners.com/" target="_blank" rel="noopener"
+              >Venix</a
+            >
+          </p>
+        </div>
+
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/turnaj_?igsh=endqejFuNXE5OHhk"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="auth/auth.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

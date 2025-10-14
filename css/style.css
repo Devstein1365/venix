@@ -436,7 +436,7 @@ header .header-links .auth-links li a:hover {
   color: #e95018;
 }
 
-.profile:hover .dropdown,
+/* .profile:hover .dropdown, */
 .dropdown.active {
   display: block;
 }

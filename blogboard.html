@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Turnaj</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="matches.html">Matches</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="blogboard.html">Blog</a></li>
+        <li><a href="contactboard.html">Contact</a></li>
+      </ul>
+      <div class="user-section">
+        <div class="user-profile">
+          <img src="images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="mobileUserName">User</span>
+        </div>
+        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="#" id="mobileLogout"
+          ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+        >
+      </div>
+    </nav>
+
+    <header class="dashboard-header">
+      <a href="dashboard.html" class="logo">
+        <img src="images/logo.png" alt="Turnaj Logo" />
+      </a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="matches.html">Matches</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="blogboard.html">Blog</a>
+        <a href="contactboard.html">Contact</a>
+      </nav>
+      <div class="user-menu">
+        <div class="notifications">
+          <i class="fa-solid fa-bell bell"></i>
+          <span class="badge">3</span>
+          <div class="notifications-dropdown">
+            <div class="notif-item">
+              <i class="fa-solid fa-check-circle success"></i>
+              <div class="notif-text">You earned 10 points!</div>
+            </div>
+            <div class="notif-item">
+              <i class="fa-solid fa-trophy tournament"></i>
+              <div class="notif-text">New tournament available</div>
+            </div>
+            <div class="notif-item">
+              <i class="fa-solid fa-info-circle update"></i>
+              <div class="notif-text">App updated to v2.0</div>
+            </div>
+          </div>
+        </div>
+        <div class="profile">
+          <img src="images/messi.avif" alt="Avatar" class="avatar" />
+          <span id="userName">User</span>
+          <div class="dropdown">
+            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="#" id="logout"
+              ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <p>Turnaj Blog</p>
+      <h1>
+        Latest News & <br />
+        Fantasy Tips <br />
+        from The Scout
+      </h1>
+      <span class="hero-text"
+        >Stay informed with the latest updates, player insights, <br />
+        and strategies to dominate your fantasy leagues.</span
+      >
+    </div>
+
+    <section class="blog-section">
+      <h1>Featured Articles</h1>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img src="images/messi.avif" alt="Player News" />
+          <div class="blog-content">
+            <h3>FPL Player Price Changes - Rises, Falls and Top Transfers</h3>
+            <p>
+              Get the latest on player price movements and transfer
+              recommendations for the upcoming gameweek.
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="images/arsenal.jpg" alt="Injuries" />
+          <div class="blog-content">
+            <h3>Latest Premier League Player Injuries - Club by Club News</h3>
+            <p>
+              Stay updated on injury reports and their impact on your fantasy
+              team selections.
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="images/man-u.jpg" alt="Tips" />
+          <div class="blog-content">
+            <h3>How to Win Your FPL League: Expert Strategies</h3>
+            <p>
+              Pro tips on team building, chip usage, and maximizing your points.
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="images/chealsea.jpg" alt="Guide" />
+          <div class="blog-content">
+            <h3>Basics Explained: How to Play Fantasy Football</h3>
+            <p>
+              A beginner's guide to getting started with Turnaj and fantasy
+              football.
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="newsletter-section">
+      <div class="newsletter-container">
+        <h3>Subscribe to our newsletter</h3>
+        <p>
+          Get the latest blog posts and fantasy football insights delivered to
+          your inbox.
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email Address" />
+          <button
+            type="submit"
+            class="arrow-btn"
+            aria-label="Submit newsletter subscription"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Turnaj Logo" />
+        </div>
+
+        <div class="footer-links">
+          <a href="contactboard.html">Contact</a>
+          <a href="#">Terms of Services</a>
+          <a href="#">Privacy</a>
+        </div>
+
+        <div class="copyright">
+          <p>
+            Copyright © <span class="brand-name">Turnaj</span> | Designed by
+            <a href="https://venixpartners.com/" target="_blank" rel="noopener"
+              >Venix</a
+            >
+          </p>
+        </div>
+
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/turnaj_?igsh=endqejFuNXE5OHhk"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="auth/auth.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
