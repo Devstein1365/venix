@@ -8,9 +8,9 @@
 
 body {
   background: #ecece4;
-  /* background-image: url("/images/wallpaper.png"); */
+  /* background-image: url("images/wallpaper.png"); */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.836)),
-    url("/images/wallpaper.png");
+    url("../images/wallpaper.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -49,7 +49,7 @@ header .header-links .auth-links li a {
   font-size: 19px;
   transition: ease 0.5s;
 }
-a[href="register.html"] {
+header .header-links .auth-links li a[href="register.html"] {
   padding: 13px 20px;
   background: #092a96;
   color: #fff;
@@ -148,7 +148,7 @@ header .header-links .auth-links li a:hover {
   text-align: center;
   color: #c9c5c5;
   background: linear-gradient(rgba(20, 23, 54, 0.85), rgba(20, 23, 54, 0.95)),
-    url("/images/bg-1.jpg");
+    url("images/bg-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -869,7 +869,7 @@ section h2 {
 .newsletter-section {
   padding: 60px 0;
   background: linear-gradient(rgba(20, 23, 54, 0.9), rgba(20, 23, 54, 0.95)),
-    url("/images/bg-1.jpg");
+    url("images/bg-1.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -893,7 +893,7 @@ section h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/images/bg-1.jpg");
+  background-image: url("images/bg-1.jpg");
   opacity: 0.1;
   z-index: 0;
 }
@@ -1384,4 +1384,17 @@ footer {
   font-size: 12px;
   font-weight: bold;
   margin-left: 8px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #eeecec;
 }

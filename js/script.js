@@ -9,7 +9,16 @@ const mobileNav = document.querySelector(".mobile-nav");
 const mobileNavOverlay = document.querySelector(".mobile-nav-overlay");
 const dropdownItems = document.querySelectorAll(".dropdown-toggle");
 const tabButtons = document.querySelectorAll(".tab-btn");
-const countdownElements = d;
+const countdownElements = document.querySelectorAll("#countdown, .countdown");
+const joinTournamentBtn = document.getElementById("joinTournament");
+const inviteFriendsBtn = document.getElementById("inviteFriends");
+const settingsForm = document.getElementById("settingsForm");
+const profileMenu = document.querySelector(".profile");
+const settingsBtn = document.getElementById("settings");
+const logoutBtn = document.getElementById("logout");
+const mobileLogoutBtn = document.getElementById("mobileLogout");
+const mobileSettingsBtn = document.getElementById("mobileSettings");
+
 /**
  * Handle logout
  */
@@ -31,15 +40,6 @@ function initLogout() {
     });
   }
 }
-electorAll("#countdown, .countdown");
-const joinTournamentBtn = document.getElementById("joinTournament");
-const inviteFriendsBtn = document.getElementById("inviteFriends");
-const settingsForm = document.getElementById("settingsForm");
-const profileMenu = document.querySelector(".profile");
-const settingsBtn = document.getElementById("settings");
-const logoutBtn = document.getElementById("logout");
-const mobileLogoutBtn = document.getElementById("mobileLogout");
-const mobileSettingsBtn = document.getElementById("mobileSettings");
 
 /**
  * Toggle mobile navigation menu

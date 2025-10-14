@@ -1,6 +1,7 @@
 /* Responsive Styles for Venix Project */
 
 /* Mobile navbar styles */
+
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -38,7 +39,11 @@
   left: -280px;
   width: 280px;
   height: 100%;
-  background: rgba(9, 42, 150, 0.95);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   z-index: 950;
   padding: 80px 20px 30px;
   overflow-y: auto;
@@ -259,9 +264,7 @@
   }
 
   .dashboard-header .user-menu {
-    position: absolute;
-    right: 60px;
-    top: 22px;
+    display: none;
   }
 
   .dashboard-header .user-menu .profile span {

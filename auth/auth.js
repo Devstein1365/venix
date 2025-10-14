@@ -144,4 +144,24 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(updateCountdown, 1000);
     updateCountdown();
   }
+
+  // Password toggle
+  const togglePassword = document.querySelectorAll(".toggle-password");
+  if (togglePassword) {
+    togglePassword.forEach((toggle, ind) => {
+      toggle.addEventListener("click", function () {
+        const passwordField = this.previousElementSibling;
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          this.classList.remove("fa-eye");
+          this.classList.add("fa-eye-slash");
+        } else {
+          passwordField.type = "password";
+          this.classList.remove("fa-eye-slash");
+          this.classList.add("fa-eye");
+        }
+     
+      });
+    });
+  }
 });

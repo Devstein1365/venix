@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - Turnaj</title>
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Mobile Navigation -->
@@ -26,7 +33,7 @@
 
     <header>
       <a href="index.html" class="logo">
-        <img src="/images/logo.png" alt="Turnaj Logo" />
+        <img src="images/logo.png" alt="Turnaj Logo" />
       </a>
       <div class="hamburger-menu">
         <span></span>
@@ -69,11 +76,17 @@
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" required />
+            <div class="password-wrapper">
+              <input type="password" id="password" required />
+              <i class="fa-solid fa-eye toggle-password"></i>
+            </div>
           </div>
           <div class="form-group">
             <label for="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword" required />
+            <div class="password-wrapper">
+              <input type="password" id="confirmPassword" required />
+              <i class="fa-solid fa-eye toggle-password"></i>
+            </div>
           </div>
           <button type="submit" class="btn-primary">Register</button>
         </form>
@@ -81,7 +94,7 @@
       </div>
     </div>
 
-    <script src="/auth/auth.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="auth/auth.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
