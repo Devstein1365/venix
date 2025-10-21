@@ -490,7 +490,6 @@ function initSettingsForm() {
  */
 function initProfileDropdown() {
   const profiles = document.querySelectorAll(".profile");
-  console.log("Found profiles:", profiles.length);
   if (profiles.length === 0) return;
 
   profiles.forEach((profile) => {
@@ -499,14 +498,12 @@ function initProfileDropdown() {
 
     profile.addEventListener("click", (e) => {
       e.stopPropagation();
-      console.log("Profile clicked on", profile);
       // Close all other dropdowns
       document.querySelectorAll(".dropdown.active").forEach((dd) => {
         if (dd !== dropdown) dd.classList.remove("active");
       });
       // Toggle this one
       dropdown.classList.toggle("active");
-      console.log("Dropdown active:", dropdown.classList.contains("active"));
     });
   });
 
