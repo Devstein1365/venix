@@ -20,6 +20,8 @@ const mobileLogoutBtn = document.getElementById("mobileLogout");
 const mobileSettingsBtn = document.getElementById("mobileSettings");
 
 
+
+//profile dropdown menu
 profileMenu.addEventListener('click', ()=> {
   document.querySelector(".dropdown").classList.toggle("active")
 })
