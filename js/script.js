@@ -489,40 +489,42 @@ function initSettingsForm() {
  * Handle profile dropdown toggle (delegated, reliable across pages)
  */
 function initProfileDropdown() {
-  if (!document.querySelector(".profile")) return;
+  const profiles = document.querySelectorAll(".profile");
+  console.log("Found profiles:", profiles.length);
+  if (profiles.length === 0) return;
 
-  const closeAll = () => {
-    document.querySelectorAll(".dropdown.active").forEach((dd) => {
-      dd.classList.remove("active");
+  profiles.forEach((profile) => {
+    const dropdown = profile.querySelector(".dropdown");
+    if (!dropdown) return;
+
+    profile.addEventListener("click", (e) => {
+      e.stopPropagation();
+      console.log("Profile clicked on", profile);
+      // Close all other dropdowns
+      document.querySelectorAll(".dropdown.active").forEach((dd) => {
+        if (dd !== dropdown) dd.classList.remove("active");
+      });
+      // Toggle this one
+      dropdown.classList.toggle("active");
+      console.log("Dropdown active:", dropdown.classList.contains("active"));
     });
-  };
-
-  // Single delegated handler to manage all interactions
-  document.addEventListener("click", (e) => {
-    const inDropdown = e.target.closest(".dropdown");
-    const profile = e.target.closest(".profile");
-
-    // If clicked inside an open dropdown, do nothing (let links work)
-    if (inDropdown) return;
-
-    // If click is on/inside a .profile, toggle its dropdown
-    if (profile) {
-      const dropdown = profile.querySelector(".dropdown");
-      if (!dropdown) return;
-      const isOpen = dropdown.classList.contains("active");
-      closeAll();
-      if (!isOpen) dropdown.classList.add("active");
-      return;
-    }
-
-    // Otherwise, clicked outside → close all
-    closeAll();
   });
 
-  // Close on Escape key
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".profile")) {
+      document.querySelectorAll(".dropdown.active").forEach((dd) => {
+        dd.classList.remove("active");
+      });
+    }
+  });
+
+  // Close on Escape
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      closeAll();
+      document.querySelectorAll(".dropdown.active").forEach((dd) => {
+        dd.classList.remove("active");
+      });
     }
   });
 }
