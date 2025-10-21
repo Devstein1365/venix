@@ -19,11 +19,6 @@ const logoutBtn = document.getElementById("logout");
 const mobileLogoutBtn = document.getElementById("mobileLogout");
 const mobileSettingsBtn = document.getElementById("mobileSettings");
 
-//profile dropdown menu
-profileMenu.addEventListener("click", () => {
-  document.querySelector(".dropdown").classList.toggle("active");
-});
-
 /**
  * Handle logout
  */
@@ -44,6 +39,13 @@ function initLogout() {
       window.location.href = "settings.html";
     });
   }
+}
+
+//profile dropdown menu
+if (document.querySelector(".profile")) {
+  document.querySelector(".profile").addEventListener("click", () => {
+    document.querySelector(".dropdown").classList.toggle("active");
+  });
 }
 
 /**
@@ -490,6 +492,8 @@ function initSettingsForm() {
  * Handle profile dropdown toggle (delegated, reliable across pages)
  */
 function initProfileDropdown() {
+  if (!document.querySelector(".profile")) return;
+
   const closeAll = () => {
     document.querySelectorAll(".dropdown.active").forEach((dd) => {
       dd.classList.remove("active");
