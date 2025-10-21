@@ -41,12 +41,9 @@ function initLogout() {
   }
 }
 
-//profile dropdown menu
-if (document.querySelector(".profile")) {
-  document.querySelector(".profile").addEventListener("click", () => {
-    document.querySelector(".dropdown").classList.toggle("active");
-  });
-}
+// This code block is being replaced by the more robust initProfileDropdown function.
+// The old code was not specific enough and caused issues on pages other than the dashboard.
+// See initProfileDropdown for the correct implementation.
 
 /**
  * Toggle mobile navigation menu
