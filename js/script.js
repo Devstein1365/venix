@@ -13,11 +13,16 @@ const countdownElements = document.querySelectorAll("#countdown, .countdown");
 const joinTournamentBtn = document.getElementById("joinTournament");
 const inviteFriendsBtn = document.getElementById("inviteFriends");
 const settingsForm = document.getElementById("settingsForm");
-const profileMenu = document.querySelectorAll(".profile");
+const profileMenu = document.querySelector(".profile");
 const settingsBtn = document.getElementById("settings");
 const logoutBtn = document.getElementById("logout");
 const mobileLogoutBtn = document.getElementById("mobileLogout");
 const mobileSettingsBtn = document.getElementById("mobileSettings");
+
+
+profileMenu.addEventListener('click', ()=> {
+  document.querySelector(".dropdown").classList.toggle("active")
+})
 
 /**
  * Handle logout
