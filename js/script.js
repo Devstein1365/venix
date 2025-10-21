@@ -2,7 +2,7 @@
  * Turnaj Platform Main JavaScript
  * Contains all non-auth related functionality for the website
  */
-
+"use strict";
 // DOM Elements
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const mobileNav = document.querySelector(".mobile-nav");
@@ -19,12 +19,10 @@ const logoutBtn = document.getElementById("logout");
 const mobileLogoutBtn = document.getElementById("mobileLogout");
 const mobileSettingsBtn = document.getElementById("mobileSettings");
 
-
-
 //profile dropdown menu
-profileMenu.addEventListener('click', ()=> {
-  document.querySelector(".dropdown").classList.toggle("active")
-})
+profileMenu.addEventListener("click", () => {
+  document.querySelector(".dropdown").classList.toggle("active");
+});
 
 /**
  * Handle logout
